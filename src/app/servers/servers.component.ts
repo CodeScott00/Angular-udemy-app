@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-servers',
@@ -8,6 +9,8 @@ import { Component } from '@angular/core';
 export class ServersComponent {
   allowNewServer = false;
   serverCreationStatus = 'no server was created';
+  serverName = 'TestServer';
+  userName = '';
 
   constructor() {
     setTimeout(() => {
@@ -16,6 +19,18 @@ export class ServersComponent {
   }
 
   onCreateServer() {
-    this.serverCreationStatus = 'server was created!';
+    this.serverCreationStatus = 'server was created! Name is' + this.serverName;
+  }
+
+  onUpdateServerName(event: Event) {
+    this.serverName = (<HTMLInputElement>event.target).value;
+  }
+
+  updateUserName(event: Event) {
+    this.userName = (<HTMLInputElement>event.target).value;
+  }
+
+  emptyInput() {
+    this.userName = '';
   }
 }
