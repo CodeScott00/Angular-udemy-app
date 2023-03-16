@@ -2,3 +2,15 @@
 <app-server></app-server>
 <!-- renders server here instead -->
 <!-- doubleing up renders multiple instances of the component -->
+<button
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+  class="button btn-primary"
+>
+  Add Server
+</button>
+<!-- <p [innerText]="allowNewServer">{{ allowNewServer }}</p> -->
+<!-- these 2 things do the same thing. property binding(LEFT) string
+interpoloatin(RIGHT) -->
+<!-- line 7 is property binding -->
+<p>{{ serverCreationStatus }}</p>

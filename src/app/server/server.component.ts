@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   templateUrl: './server.component.html', // points to the html template //
 })
 export class ServerComponent {
+  serverId = 10;
+  serverStatus: string = 'offline';
+
+  getServerStatus() {
+    return this.serverStatus;
+  }
   //by convention: add component to name and the file server.component.ts for example
 }
