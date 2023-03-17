@@ -6,6 +6,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
+import { PasswordComponent } from './password/password.component';
 @NgModule({
   //components need imported here on creation. then imported too
   declarations: [
@@ -14,6 +15,7 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
     ServersComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
+    PasswordComponent,
   ],
   imports: [BrowserModule, FormsModule], // may need more imports here shortly
   providers: [],
